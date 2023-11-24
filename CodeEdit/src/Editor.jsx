@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './Editor.css'
-import BrainFck from './Encrypt'
+import Encrypt from './Encrypt'
 
 function Editor(){
     const [txt, setTxt] = useState("");
@@ -16,11 +16,11 @@ function Editor(){
                 <div className="code-editor">
                     <div className="code">
                         <div className="html-code">
-                            <h1>Brain Fuck</h1>
+                            <h1>Encrypt</h1>
                             <textarea onChange={handleChange} value={txt}></textarea>
                         </div>
                     </div>
-                    <pre id="result"><BrainFck text={txt} /></pre>
+                    <pre id="result"><Encrypt text={txt} /></pre>
                 </div>
             </div>
         </>
