@@ -1,3 +1,8 @@
+#Installation
+- git clone https://github.com/John-Charles1/CodeEdit.git
+
+then fire up your favorite live server environment
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
