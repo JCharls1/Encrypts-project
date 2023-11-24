@@ -8,7 +8,6 @@ function Editor(){
 
     const handleChange = (event) =>{
         setTxt(event.target.value);
-        console.log(event.target.value);
     }
 
     return(
@@ -21,7 +20,7 @@ function Editor(){
                             <textarea onChange={handleChange} value={txt}></textarea>
                         </div>
                     </div>
-                    <pre id="result"><BrainFck text={text} /></pre>
+                    <pre id="result"><BrainFck text={txt} /></pre>
                 </div>
             </div>
         </>
