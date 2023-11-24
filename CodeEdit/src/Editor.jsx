@@ -1,17 +1,27 @@
+import { useState } from 'react'
 import './Editor.css'
+import BrainFck from './BrainFck'
 
 function Editor(){
+    const [txt, setTxt] = useState("");
+    const text = "Test Result";
+
+    const handleChange = (event) =>{
+        setTxt(event.target.value);
+        console.log(event.target.value);
+    }
+
     return(
         <>
             <div className="body">
-                <div class="code-editor">
-                    <div class="code">
-                        <div class="html-code">
+                <div className="code-editor">
+                    <div className="code">
+                        <div className="html-code">
                             <h1>Brain Fuck</h1>
-                            <textarea></textarea>
+                            <textarea onChange={handleChange} value={txt}></textarea>
                         </div>
                     </div>
-                    <iframe id="result"></iframe>
+                    <pre id="result"><BrainFck text={text} /></pre>
                 </div>
             </div>
         </>
