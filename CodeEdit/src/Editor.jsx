@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './Editor.css'
-import BrainFck from './BrainFck'
+import BrainFck from './Encrypt'
 
 function Editor(){
     const [txt, setTxt] = useState("");
