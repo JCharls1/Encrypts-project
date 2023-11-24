@@ -1,6 +1,6 @@
 
 function BrainFck({text}){
-
+    let a = "asd";
     let tape = [0];
     let cell_index = 0;
 
