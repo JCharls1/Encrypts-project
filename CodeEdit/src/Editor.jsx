@@ -5,6 +5,7 @@ import Encrypt from './Encrypt'
 function Editor(){
     const [txt, setTxt] = useState("");
     const text = "Test Result";
+    let a = "sad"
 
     const handleChange = (event) =>{
         setTxt(event.target.value);
