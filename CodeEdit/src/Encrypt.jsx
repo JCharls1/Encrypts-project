@@ -60,6 +60,7 @@ function Encrypt({text}){
             input += alphabet[accumulator-1];
         }else if(instruction == 'e'){ // e for empty
             accumulator = 0;
+            loop_input = 0;
         }else if(instruction == 'l'){ // l for loop
             for(let i = 0; i < loop_input; i++){
                 accumulator++;
