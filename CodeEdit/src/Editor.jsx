@@ -23,23 +23,6 @@ function Editor() {
         <div className="code-editor">
           <div className="code">
             <div className="html-code">
-              <h1>Encrypt</h1>
-              <textarea
-                onChange={handleChangeDecrypt}
-                value={DecryptTxt}
-              ></textarea>
-            </div>
-          </div>
-          <pre id="result">
-            {/* <Encrypt text={txt} />  */}
-            <Decrypt text={DecryptTxt} />
-          </pre>
-        </div>
-      </div>
-      <div className="body">
-        <div className="code-editor">
-          <div className="code">
-            <div className="html-code">
               <h1>Decrypt</h1>
               <textarea
                 onChange={handleChangeEncrypt}
@@ -50,6 +33,23 @@ function Editor() {
           <pre id="result">
             <Encrypt text={EncryptTxt} />
             {/* <Decrypt text={txt} />  */}
+          </pre>
+        </div>
+      </div>
+      <div className="body">
+        <div className="code-editor">
+          <div className="code">
+            <div className="html-code">
+              <h1>Encrypt</h1>
+              <textarea
+                onChange={handleChangeDecrypt}
+                value={DecryptTxt}
+              ></textarea>
+            </div>
+          </div>
+          <pre id="result">
+            {/* <Encrypt text={txt} />  */}
+            <Decrypt text={DecryptTxt} />
           </pre>
         </div>
       </div>
