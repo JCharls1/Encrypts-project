@@ -1,5 +1,5 @@
 import Encrypt from "./Encrypt";
-
+import { useState } from "react";
 function Decrypt({ text }) {
   const alphabet = [
     "a",
@@ -160,9 +160,32 @@ function Decrypt({ text }) {
     ip++;
   }
 
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard
+      .writeText(output)
+      .then(() => {
+        setCopied(true); // Show the copied message
+        setTimeout(() => setCopied(false), 2000); // Hide after 2 seconds
+      })
+      .catch((err) => {
+        console.error("Failed to copy text: ", err);
+      });
+  };
+
   return (
     <>
-      <p className="p-10">Output: {output}</p>
+      <div className="flex flex-col items-center justify-center">
+        <p className="p-10">Output: {output}</p>
+        <button
+          className="text-gray-500 dark:text-gray-400 bg-gray-900 dark:hover:bg-gray-800 rounded-lg p-2"
+          onClick={handleCopy}
+        >
+          Copy
+        </button>
+        {copied && <p className="text-gray-400 mt-2">Text copied!</p>}
+      </div>
     </>
   );
 }
