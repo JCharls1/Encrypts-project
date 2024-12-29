@@ -1,3 +1,5 @@
+import Output from "./Output";
+
 function Encrypt({ text }) {
   const isNumber = (value) => {
     return typeof value == "number";
@@ -106,7 +108,7 @@ function Encrypt({ text }) {
 
   return (
     <>
-      <p className="p-10">Output: {input}</p>
+      <Output output={input}/>
     </>
   );
 }

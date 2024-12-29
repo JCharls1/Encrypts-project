@@ -22,7 +22,7 @@ function Editor() {
       <div id="container" className="flex flex-col place-content-center">
         <div className="p-5">
           <h1 className="font-Arial flex justify-around text-white m-2">
-            <div className="border-2 bg-gray-500 px-20 py-10">Encrypt</div>
+            <div className="bg-gray-500 px-20 py-10">Encrypt</div>
           </h1>
           <div id="encrypt-input" className="flex justify-center p-5">
             <input
@@ -40,7 +40,7 @@ function Editor() {
 
         <div id="decrypt" className="p-5">
           <h1 className="font-Arial flex justify-around text-white m-2">
-            <div className="border-2 bg-gray-500 px-20 py-10">Decrypt</div>
+            <div className="bg-gray-500 px-20 py-10">Decrypt</div>
           </h1>
           <div id="decrypt-input" className="flex justify-center p-5">
             <input

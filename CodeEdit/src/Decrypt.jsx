@@ -1,5 +1,7 @@
 import Encrypt from "./Encrypt";
 import { useState } from "react";
+import Output from './Output';
+
 function Decrypt({ text }) {
   const alphabet = [
     "a",
@@ -177,7 +179,7 @@ function Decrypt({ text }) {
   return (
     <>
       <div className="flex flex-col items-center justify-center">
-        <p className="p-10">Output: {output}</p>
+        <Output output={output}/>
         <button
           className="text-gray-500 dark:text-gray-400 bg-gray-900 dark:hover:bg-gray-800 rounded-lg p-2"
           onClick={handleCopy}
